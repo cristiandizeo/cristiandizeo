@@ -113,6 +113,9 @@ section {
   background-color: #313131;
   color: whitesmoke;
 }
+.freebirdFormviewerViewFooterEmbeddedBackground{
+  visibility: hidden!important;
+}
 /* INICIO SKILLS */
 .skills {
   width: 50%;
