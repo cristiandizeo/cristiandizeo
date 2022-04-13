@@ -1,6 +1,8 @@
 :root {
   --fuentePrimaria: "Montserrat", sans-serif;
   --fuenteSecundaria: 'Poppins', sans-serif;
+  --colorOscuro: #313131 ;
+  --colorClaro: #f8f9fa;
 }
 
 html {
@@ -66,7 +68,7 @@ body {
 }
 
 section#accueil {
-  background: #f8f9fa;
+  background: var(--colorClaro);
   position: relative;
   width: 100%;
   height: 100vh;
@@ -328,7 +330,7 @@ section {
 }
 #perfil {
   background-color: #5a5a5a;
-  color: #f8f9fa;
+  color: var(--colorClaro);
 }
 .foto-circle {
   border-radius: 50%;
@@ -478,34 +480,29 @@ section {
 /* FIN Proyectos */
 
 #proyectos {
-    background-color: #f8f9fa;
+    background-color: var(--colorClaro);
   }
   
 #contacto {
-    background-color: #313131;
+    background-color: var(--colorOscuro);
     color: whitesmoke;
   }
-
-  @media (max-width: 600px) {
-    .section-title {
-      font-size: 40px;
-    }
-  } 
     
-  #form {
+  .form {
     position: relative;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     margin: auto;
   }
 
-  #form input{
+  .form input{
     font-size: 0.875em;
   width: 470px;
   height: 50px;
   padding: 0px 15px 0px 15px;
   
   outline: none;
-  color: #313131;
+  color: var(--colorOscuro);
   
   border: solid 1px #b3aca7;
   
@@ -515,7 +512,7 @@ section {
   -ms-transition: all 0.3s ease-in-out;
   }
 
-  #form input:hover, textarea:hover {
+  .form input:hover, textarea:hover {
     background: #b3aca7;
   }
 
@@ -528,7 +525,7 @@ section {
     
     outline: none;
     
-    color: #313131;
+    color: var(--colorOscuro);
     font-family: 'Lato', sans-serif;
     font-size: 0.875em;
     
@@ -541,5 +538,14 @@ section {
   }
   .copyright a{
     text-decoration: none;
-    color: #313131;
+    color: var(--colorOscuro);
   }
+  
+  @media (max-width: 600px) {
+    .section-title {
+      font-size: 40px;
+    }
+    .form, .form textarea, .form input{
+      max-width: 300px;
+    }
+  } 
