@@ -79,7 +79,7 @@ section#accueil {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-left: -100px;
+  margin-left: -60px;
   margin-bottom: -200px;
 
   background: #5a5a5a;
@@ -191,7 +191,7 @@ section#accueil {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: -100px;
+  margin-left: -50px;
   margin-top: -150px;
 
   background: #ff3636;
