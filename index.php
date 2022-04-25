@@ -166,10 +166,10 @@
 
         <p class="text-center section-subtitle">Enviame tu propuesta o consulta &#128172;</p>
         <hr>
-        <form class="form">		
-          <input id="name" type="text" title="Nombre" data-bs-toggle="tooltip" data-bs-placement="left" placeholder="TU NOMBRE">
-          <input id="email" type="text" title="Email" data-bs-toggle="tooltip" data-bs-placement="left" placeholder="EMAIL">
-          <textarea id="message" type="text" title="Mensaje" data-bs-toggle="tooltip" data-bs-placement="left" placeholder="TU MENSAJE"></textarea>
+        <form action="email.php" method="POST" class="form">		
+          <input id="name" name="name" type="text" title="Nombre" data-bs-toggle="tooltip" data-bs-placement="left" placeholder="TU NOMBRE" required>
+          <input id="email" name="email" type="email" title="Email" data-bs-toggle="tooltip" data-bs-placement="left" placeholder="EMAIL" required>
+          <textarea id="message" name="message" title="Mensaje" data-bs-toggle="tooltip" data-bs-placement="left" placeholder="TU MENSAJE" required></textarea>
           <input id="submit" type="submit" value="¡ENVIAR!">        
         </form>
         <hr>
