@@ -166,7 +166,14 @@
 
         <p class="text-center section-subtitle">Enviame tu propuesta o consulta &#128172;</p>
         <hr>
-        <form action="email.php" method="POST" class="form">		
+        <div class="alert alert-success text-center alert-dismissible fade show" id="alertaEmail" role="alert">
+  <strong>¡Gracias por tu mensaje!</strong> Te responderé en breve <i class="fa-solid fa-face-grin-beam"></i>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+        <div class="alert alert-primary text-center alert-dismissible fade show" id="alertaEnviando" role="alert">
+  <strong>Enviando email <i class="fa-solid fa-paper-plane"></i></strong>
+</div>
+        <form class="form" id="form">		
           <input id="name" name="name" type="text" title="Nombre" data-bs-toggle="tooltip" data-bs-placement="left" placeholder="TU NOMBRE" required>
           <input id="email" name="email" type="email" title="Email" data-bs-toggle="tooltip" data-bs-placement="left" placeholder="EMAIL" required>
           <textarea id="message" name="message" title="Mensaje" data-bs-toggle="tooltip" data-bs-placement="left" placeholder="TU MENSAJE" required></textarea>
