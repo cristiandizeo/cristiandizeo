@@ -24,8 +24,9 @@ const formFile = document.getElementById('form');
 // definimos el boton a usar submit
 const submit = document.getElementById("submit");
 
-// definimos la accion clic al pulsar el boton submit
 submit.addEventListener('click', function(event){
+  // definimos la accion clic al pulsar el boton submit
+  if(formFile.checkValidity()){
 
     event.preventDefault(); // anulamos que boton nos lleve a otro lado
 
@@ -35,10 +36,11 @@ submit.addEventListener('click', function(event){
     // como parametro pasamos los datos del formulario
     postData(formattedFormData);
 
+    document.getElementById("alertaEmail").style.display = "none";
     document.getElementById("alertaEnviando").style.display = "block";
     document.getElementById("form").reset();
 
-});
+}});
 
 // nuestra función personalizada que envia datos y recibe respuesta del servidor
 // usamos async/await para trabajar de mejor manera la respuesta por parte del servidor
@@ -59,5 +61,4 @@ async function postData(formattedFormData){
 
     // y la mostramos en un alert
     // alert(data);
-
 }

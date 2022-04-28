@@ -11,6 +11,8 @@ require 'vendor/autoload.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $message = $_POST['message'];
+
+if(!empty($name) && !empty($email) && !empty($message)){
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
@@ -24,8 +26,8 @@ try {
     $mail->Password = 'b169c323834b2a';                                //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');
+    $mail->setFrom($email, $name);
+    $mail->addAddress('dizeoc@gmail.com', 'Cristian Dizeo');
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
@@ -38,8 +40,11 @@ try {
 
     $mail->Body = $contenido;
     $mail->send();
+
+    exit;
 } catch (Exception $e) {
     echo '<script>
     alert("El mensaje no pudo ser enviado :( Error: ' . $mail->ErrorInfo . '")
     </script>';
+}
 }
