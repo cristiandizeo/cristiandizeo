@@ -44,7 +44,7 @@ h6 {
 .col {
   padding: 1rem;
 }
-#alertaEmail, #alertaEnviando{
+#msjEnviado, #msjNoEnviado, #alertaEnviando{
   display: none;
 }
 /* navbar */

@@ -166,12 +166,17 @@
 
         <p class="text-center section-subtitle">Enviame tu propuesta o consulta &#128172;</p>
         <hr>
-        <div class="alert alert-success text-center alert-dismissible fade show" id="alertaEmail" role="alert">
+        
+        <div class="alert alert-success text-center alert-dismissible fade show" id="msjEnviado" role="alert">
   <strong>¡Gracias por tu mensaje!</strong> Te responderé en breve <i class="fa-solid fa-face-grin-beam"></i>
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
+        <div class="alert alert-danger text-center alert-dismissible fade show" id="msjNoEnviado" role="alert">
+  <strong>No se pudo enviar el mensaje <i class="fa-solid fa-face-frown"></i></strong> Por favor revisá el formulario o intentá en unos momentos.</i>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
         <div class="alert alert-primary text-center alert-dismissible fade show" id="alertaEnviando" role="alert">
-  <strong>Enviando email <i class="fa-solid fa-paper-plane"></i></strong>
+  <strong>Enviando mensaje <i class="fa-solid fa-paper-plane"></i></strong>
 </div>
         <form class="form" id="form">		
           <input id="name" name="name" type="text" title="Nombre" data-bs-toggle="tooltip" data-bs-placement="left" placeholder="TU NOMBRE" required>

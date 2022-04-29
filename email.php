@@ -41,10 +41,8 @@ try {
     $mail->Body = $contenido;
     $mail->send();
 
-    exit;
+    echo true;
 } catch (Exception $e) {
-    echo '<script>
-    alert("El mensaje no pudo ser enviado :( Error: ' . $mail->ErrorInfo . '")
-    </script>';
+    echo false;
 }
 }
