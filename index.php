@@ -148,9 +148,9 @@
         <div class="box">
           <div class="content">
             <h2>01</h2>
-            <h3>Card One</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-            <a href="#">Read More</a>
+            <h3>Sistema Tareas</h3>
+            <p>Sistema con registro de usuarios. Crea y administra tareas a realizar de tus proyectos.</p>
+            <a href="https://sistematareas.herokuapp.com/" target="blank">Ir al sitio</a>
           </div>
         </div>
       </div>

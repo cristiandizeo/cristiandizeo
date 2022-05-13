@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 require 'vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 
 $name = $_POST['name'];
@@ -15,11 +15,12 @@ $email = $_POST['email'];
 $message = $_POST['message'];
 
 if(!empty($name) && !empty($email) && !empty($message)){
-//Create an instance; passing `true` enables exceptions
+
+//Instancia de PHPMailer pasando `true` para habilitar excepciones
 $mail = new PHPMailer(true);
 
 try {
-    //Server settings
+    // Configuraciones del servidor
     $mail->isSMTP();
     $mail->Host = $_ENV['MAIL_HOST'];
     $mail->SMTPAuth = true;
@@ -27,11 +28,11 @@ try {
     $mail->Username = $_ENV['MAIL_USER'];
     $mail->Password = $_ENV['MAIL_PASSWORD'];                                //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-    //Recipients
+    // Recipients
     $mail->setFrom($email, $name);
     $mail->addAddress('dizeoc@gmail.com', 'Cristian Dizeo');
 
-    //Content
+    // Contenido
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Mensaje desde la web';
     $contenido = '<html>';

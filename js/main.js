@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const data = await response.text();
 
     if (data == 1) {
-      msjEnviado.style.display = "block";
       document.getElementById("form").reset();
+      msjEnviado.style.display = "block";
     } else {
       msjNoEnviado.style.display = "block";
     }
