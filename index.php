@@ -85,7 +85,7 @@
           <p class="text-center"><i class="fa-solid fa-graduation-cap"></i> Analista de sistemas | Desarrollador web <i class="fa-solid fa-laptop-code"></i></p>
         </div>
         <div class="container text-center p-5">
-          <h4><a href="img/cristiandizeo.pdf" download="CV Cristian Dizeo.pdf" target="_blank" style="text-decoration: none;"><i class="fa-regular fa-file-lines"></i> Curriculum Vitae</a></h4>
+          <h4><a href="img/cristiandizeo.pdf" target="_blank" style="text-decoration: none;"><i class="fa-regular fa-file-lines"></i> Curriculum Vitae</a></h4>
         </div>
 
       </div>
