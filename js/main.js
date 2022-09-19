@@ -42,31 +42,33 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("alertaEnviando").style.display = "block";
 
     }
+    
+      // nuestra función personalizada que envia datos y recibe respuesta del servidor
+      // usamos async/await para trabajar de mejor manera la respuesta por parte del servidor
+    
+      // en fetch especificamos el archivo en el servidor que captura los datos enviados
+      async function postData(formattedFormData) {
+        const response = await fetch('email.php', {
+          // el metodo a usar
+          method: 'POST',
+          // los datos a ser enviados
+          body: formattedFormData
+        });
+    
+        document.getElementById("alertaEnviando").style.display = "none";
+        // data contendra la respuesta del servidor
+        const data = await response.text();
+    
+        if (data == 1) {
+          document.getElementById("form").reset();
+          msjEnviado.style.display = "block";
+        } else {
+          msjNoEnviado.style.display = "block";
+        }
+        submit.disabled = false;
+      }
+
+
   });
-
-  // nuestra función personalizada que envia datos y recibe respuesta del servidor
-  // usamos async/await para trabajar de mejor manera la respuesta por parte del servidor
-
-  // en fetch especificamos el archivo en el servidor que captura los datos enviados
-  async function postData(formattedFormData) {
-    const response = await fetch('email.php', {
-      // el metodo a usar
-      method: 'POST',
-      // los datos a ser enviados
-      body: formattedFormData
-    });
-
-    document.getElementById("alertaEnviando").style.display = "none";
-    // data contendra la respuesta del servidor
-    const data = await response.text();
-
-    if (data == 1) {
-      document.getElementById("form").reset();
-      msjEnviado.style.display = "block";
-    } else {
-      msjNoEnviado.style.display = "block";
-    }
-    submit.disabled = false;
-  }
 
 });
