@@ -139,43 +139,13 @@
     <div class="container">
       <div class="row">
         <h1 class="text-center section-title">Proyectos</h1>
+        <p class="text-center section-subtitle">Pronto podrás ver mis proyectos acá</p>
       </div>
     </div>
 
     <div class="proyectos">
-
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>01</h2>
-            <h3>Sistema Tareas</h3>
-            <p>Sistema con registro de usuarios. Crea y administra tareas a realizar de tus proyectos.</p>
-            <a href="https://sistematareas.herokuapp.com/" target="blank">Ir al sitio</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>02</h2>
-            <h3>Card Two</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-            <a href="#">Read More</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>03</h2>
-            <h3>Card Three</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-            <a href="#">Read More</a>
-          </div>
-        </div>
-      </div>
+  <img src="/img/construction-area.png" width="400" alt="">
+     
     </div>
   </section>
 
