@@ -92,9 +92,10 @@
 
       <div class="col">
 
-        <h4>Sobre mi</h1>
+        <h4>¡Hola!</h4>
           <hr>
-          <p>Me encuentro realizando mis primeros pasos como desarrollador de software y tengo una gran motivación por seguir perfeccionando habilidades y crecer profesionalmente. Confío en las habilidades adquiridas tanto en mi carrera como de forma autodidacta para resolver cualquier problema que se presente.</p>
+          <p>Me encuentro realizando mis primeros pasos como desarrollador de software, tengo una gran motivación por seguir perfeccionando habilidades y crecer profesionalmente. 
+            Confío en las habilidades adquiridas tanto en mi carrera como de forma autodidacta para resolver cualquier problema que se presente.</p>
           <br>
           <h4>Tecnologías que utilizo</h1>
             <hr>
@@ -144,7 +145,7 @@
 
     <div class="proyectos">
 
-      <div class="card">
+      <!-- <div class="card">
         <div class="box">
           <div class="content">
             <h2>01</h2>
@@ -153,9 +154,20 @@
             <a href="https://sistematareas.herokuapp.com/" target="blank">Ir al sitio</a>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="card">
+        <div class="box">
+          <div class="content">
+            <h2>01</h2>
+            <h3>Grasman Autos & Bikes</h3>
+            <p>Agencia de venta de vehículos</p>
+            <a href="https://www.grasmanautos.com/" target="blank">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="card">
         <div class="box">
           <div class="content">
             <h2>02</h2>
@@ -164,18 +176,9 @@
             <a href="#">Read More</a>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="card">
-        <div class="box">
-          <div class="content">
-            <h2>03</h2>
-            <h3>Card Three</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-            <a href="#">Read More</a>
-          </div>
-        </div>
-      </div>
+
     </div>
   </section>
 
