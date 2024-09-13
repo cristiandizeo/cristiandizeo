@@ -335,6 +335,7 @@ section {
   color: var(--colorClaro);
 }
 .foto-circle {
+  max-width: 50%;
   border-radius: 50%;
   border: 5px solid var(--bs-gray-800);
   margin: 15px;
