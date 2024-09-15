@@ -548,7 +548,4 @@ section {
     .section-title {
       font-size: 40px;
     }
-    .form, .form textarea, .form input{
-      max-width: 300px;
-    }
   } 
