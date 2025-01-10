@@ -12,6 +12,21 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        montserrat: ["'Montserrat'", "serif"], // Nombre exacto de la fuente
+        electrolize: ["'Electrolize'", "serif"]
+      },
+      animation: {
+        gradient: 'gradient 3s ease infinite',
+        bounce: 'bounce 1.5s infinite',
+        ping: 'ping 1.5s infinite',
+      },
+      keyframes: {
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+      },
     },
   },
   plugins: [],

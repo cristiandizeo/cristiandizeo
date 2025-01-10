@@ -1,10 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Importar la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
+/* Variables CSS personalizadas */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Colores */
+  --color-primary: #333333;
+  --color-secondary: #777777;
+  --color-accent: #999999;
+  --color-background: #f5f5f5;
+  --color-text: #000000;
+  --color-border: #dddddd;
+
+  /* Tipografía */
+  --font-family: 'Montserrat', serif; /* Fuente por defecto */
+  --font-size-base: 16px;
+  --font-size-large: 20px;
+  --font-size-small: 14px;
+
+  /* Espaciados */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 32px;
+
+  /* Bordes y radios */
+  --border-radius: 8px;
+  --border-width: 1px;
+
+  /* Sombra */
+  --box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0px 6px 12px rgba(0, 0, 0, 0.15);
+
+  /* Otros */
+  --transition-speed: 0.3s;
+  --container-width: 1200px;
+
+  /* Scroll */
+  --scrollbar-width: 8px;
+  --scrollbar-track-color: #f5f5f5;
+  --scrollbar-thumb-color: #333333;
+  --scroll-sensitivity: 2; /* Sensibilidad del scroll al arrastrar */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,8 +52,22 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+html, body {
+  overflow: hidden; /* Para ocultar barras de desplazamiento */
 }
+
+.scrollable-container {
+  overflow: auto;
+  height: 100vh; /* Asegúrate de ajustar el tamaño */
+}
+
+/* Reglas globales */
+body {
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
