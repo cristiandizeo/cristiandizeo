@@ -1,12 +1,36 @@
-Hola 👋
-¡Soy Cristian Dizeo, Desarrollador Web y Analista de Sistemas!
+# 👋 ¡Hola, soy Cristian Dizeo!
 
-💻 He trabajado en diversos proyectos web, tanto con tecnologías clásicas como HTML, CSS, JavaScript, Tailwind, Bootstrap, y PHP, además de desarrollar aplicaciones web utilizando el framework Laravel. Actualmente, estoy trabajando en un proyecto con Laravel y React, lo que me ha permitido profundizar en la integración de front-end y back-end.
+💻 **Desarrollador Full Stack** | ⚡ **Emprendedor Digital** | 🚀 **Apasionado por la tecnología**  
 
-🌐 También he creado varios sitios web en WordPress, donde he adquirido experiencia en la personalización y gestión de contenidos, optimizando tanto la funcionalidad como el diseño.
+Soy un desarrollador con experiencia en **Laravel, React, Next.js y NestJS**, y he trabajado en proyectos que van desde **e-commerce** hasta **aplicaciones con IA**. Me encanta crear soluciones digitales, explorar nuevas tecnologías y compartir conocimiento.  
 
-🔧 Mi enfoque está en desarrollar soluciones escalables y eficientes, con especial atención a la seguridad y las buenas prácticas de desarrollo. Utilizo Git para el control de versiones y la colaboración en equipo, garantizando un flujo de trabajo organizado y sin conflictos.
+---
 
-🚀 Estoy en constante aprendizaje de nuevas tecnologías y mejorando mis habilidades para crecer como profesional. Ahora estoy listo para enfocarme completamente en mi carrera y aplicar toda mi experiencia en nuevos desafíos.
+### 🚀 **Tecnologías y herramientas**  
 
-😄 ¡Cualquier consulta, propuesta o feedback es más que bienvenida! 💬
+🌐 **Frontend:** React, Next.js, TypeScript, Tailwind CSS, Zustand  
+🛠 **Backend:** Laravel, NestJS, Node.js  
+📦 **Base de Datos:** MySQL, PostgreSQL, MongoDB  
+☁️ **Cloud & Hosting:** Firebase, Vercel, Render, Cloudinary  
+📊 **Otros:** Docker, Git, Jira, Wordpress  
+
+---
+
+### 📌 **Proyectos Destacados**  
+
+📷 **[Petgram](https://github.com/CristianDizeo/Petgram)** – Una app estilo Instagram para mascotas perdidas.  
+📖 **[Mini NotebookLM](https://github.com/CristianDizeo/NotebookLM-Clone)** – Proyecto con IA para interactuar con documentos.  
+🛒 **[E-commerce Mayorista](https://github.com/CristianDizeo/Ecommerce)** – Plataforma de venta con múltiples proveedores.  
+
+---
+
+### 📢 **Dónde encontrarme**  
+
+🔗 [LinkedIn](https://linkedin.com/in/cristian-dizeo)  
+🌐 [Portafolio](https://cristiandizeo.github.io/cristiandizeo/)  
+
+📩 **Contacto:** ¡Estoy abierto a colaboraciones y proyectos interesantes! Puedes escribirme en LinkedIn o GitHub.  
+
+---
+
+⭐️ ¡Si te interesa lo que hago, dale una estrella ⭐️ a mis repositorios!  
