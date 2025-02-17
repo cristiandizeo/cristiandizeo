@@ -1,67 +1,63 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { TypeAnimation } from "react-type-animation";
 
-export default function HomePage() {
-  const roles = ["backend", "frontend", "fullstack"];
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [cursorVisible, setCursorVisible] = useState(true);
-
-  useEffect(() => {
-    let typingTimer: NodeJS.Timeout;
-
-    const handleTyping = () => {
-      const currentRole = roles[currentRoleIndex];
-      if (isDeleting) {
-        setDisplayedText((prev) => prev.slice(0, -1));
-      } else {
-        setDisplayedText((prev) => currentRole.slice(0, prev.length + 1));
-      }
-
-      if (!isDeleting && displayedText === currentRole) {
-        // Pausa después de escribir la palabra completa
-        typingTimer = setTimeout(() => setIsDeleting(true), 3000);
-      } else if (isDeleting && displayedText === "") {
-        // Pasa al siguiente rol después de borrar
-        setIsDeleting(false);
-        setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-      }
-    };
-
-    typingTimer = setTimeout(handleTyping, isDeleting ? 50 : 100); // Velocidad de escritura y borrado
-    return () => clearTimeout(typingTimer);
-  }, [displayedText, isDeleting, currentRoleIndex]);
-
-  useEffect(() => {
-    // Controla el parpadeo del cursor
-    const cursorTimer = setInterval(() => {
-      setCursorVisible((prev) => !prev);
-    }, 500); // Parpadea cada 500ms
-    return () => clearInterval(cursorTimer);
-  }, []);
-
+export default function Home() {
   return (
-    <main className="relative flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-      {/* Fondo dinámico */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-gray-500 via-black to-slate-500 blur-3xl opacity-30 animate-pulse"></div>
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-950 text-white px-6">
+      {/* Título con animación de escritura */}
+      <h1 className="text-5xl/[2] md:text-7xl/[2] font-bold text-center mb-4">
+        <TypeAnimation
+          sequence={[
+            "CRISTIAN DIZEO",
+            1500,
+            "Desarrollador Web",
+            1500,
+            "React | Next.js | TypeScript",
+            1500,
+          ]}
+          speed={50}
+          repeat={Infinity}
+        />
+      </h1>
 
-      <div className="relative z-10 flex flex-col items-center justify-center text-center space-y-8 px-6">
-        {/* Nombre */}
-        <h1 className="font-electrolize text-5xl md:text-8xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-neutral-100 to-neutral-400">
-          CRISTIAN DIZEO
-        </h1>
+      <p className="text-xl text-gray-400 text-center mb-8">
+        Transformando ideas en código eficiente y escalable.
+      </p>
 
-        {/* Descripción dinámica */}
-        <p className="text-lg md:text-2xl text-gray-300">
-          Desarrollador web{" "}
-          <span className="text-teal-500 font-semibold">{displayedText}</span>
-          {cursorVisible && (
-            <span className="blinking-cursor">|</span>
-          )}
-        </p>
-      </div>
+      {/* Caja estilo terminal con "Sobre Mí" */}
+      <div className="bg-gray-950 text-gray-300 font-mono rounded-lg p-4 shadow-lg w-full max-w-2xl mx-auto relative">
+  {/* Barra superior de VS Code */}
+  <div className="flex items-center bg-[#252526] px-3 py-1 rounded-t-lg text-sm text-gray-400">
+    <div className="flex space-x-2">
+      <span className="w-3 h-3 bg-red-500 rounded-full"></span>
+      <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
+      <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+    </div>
+    <span className="ml-3">developer.js</span>
+  </div>
+
+  {/* Código con sintaxis destacada */}
+  <pre className="mt-2 text-sm leading-relaxed">
+    <code>
+      <span className="text-blue-400">const</span> developer = {"{"}
+      <br />
+      &nbsp;&nbsp;<span className="text-blue-200">name</span>: <span className="text-orange-400">"Cristian Dizeo"</span>,
+      <br />
+      &nbsp;&nbsp;<span className="text-blue-200">role</span>: [<span className="text-orange-400">"Frontend Developer"</span>, <span className="text-orange-400">"Backend Developer"</span>],
+      <br />
+      &nbsp;&nbsp;<span className="text-blue-200">years_xp</span>: <span className="text-red-400">5</span>,
+      <br />
+      &nbsp;&nbsp;<span className="text-blue-200">currentlyLearning</span>: [<span className="text-orange-400">"English conversation"</span>, <span className="text-orange-400">"AI Integrations"</span>],
+      <br />
+      &nbsp;&nbsp;<span className="text-blue-200">contact</span>: <span className="text-orange-400">"dizeoc@gmail.com"</span>
+      <br />
+      {"};"}
+    </code>
+  </pre>
+</div>
+
+
     </main>
   );
 }

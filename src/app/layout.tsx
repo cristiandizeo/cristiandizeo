@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SpaceBackground from "./components/layout/Background";
+import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
   title: "Cristian Dizeo | Portfolio",
@@ -14,12 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`antialiased min-h-screen overflow-hidden`}
-      >
+    <html lang="es">
+      <body>
+        <Navbar />
         {children}
-        <SpaceBackground />
       </body>
     </html>
   );
