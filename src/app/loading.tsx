@@ -1,24 +1,15 @@
-"use client";
+"use client"
 
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 
 export default function Loader() {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(false), 2000); // Simula carga
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
-    isVisible && (
       <motion.div
         className="fixed inset-0 flex items-center justify-center bg-gray-950 text-white"
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
         transition={{ duration: 0.5, delay: 1.5 }}
-        onAnimationComplete={() => setIsVisible(false)}
       >
         <motion.div
           className="relative w-12 h-12 flex items-center justify-center"
@@ -31,5 +22,4 @@ export default function Loader() {
         </motion.div>
       </motion.div>
     )
-  );
 }
