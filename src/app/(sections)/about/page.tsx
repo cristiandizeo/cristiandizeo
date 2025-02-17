@@ -8,8 +8,8 @@ import { FaLocationPin } from "react-icons/fa6";
 
 export default function About() {
   return (
-    <div className="h-screen my-auto justify-center bg-gray-950 text-gray-200 overflow-auto">
-    <div className="flex flex-col md:flex-row h-full">
+    <div className="h-screen p-4 justify-center bg-gray-950 text-gray-200 overflow-auto">
+    <div className="flex flex-col md:flex-row h-full space-x-4 space-y-4">
       {/* Columna Izquierda - Imagen */}
       <div className="w-full md:w-1/3 flex justify-center items-center">
         <motion.div
@@ -51,7 +51,7 @@ export default function About() {
         </motion.div>
       </div>
 
-      <div className="w-full md:w-2/3 space-y-4 py-4">
+      <div className="w-full md:w-2/3 space-y-6 p-4">
         <h2 className="text-4xl font-bold text-teal-400">Sobre mí</h2>
         <p className="text-lg leading-relaxed text-gray-300">
           Soy <span className="text-teal-400">Cristian Dizeo</span>, un desarrollador web 

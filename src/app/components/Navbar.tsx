@@ -29,7 +29,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="relative w-full bg-gray-950 border-b border-gray-700">
+    <div className="absolute top-0 w-full bg-gray-950 border-b border-gray-700">
       <div className="flex items-center px-4 py-2 space-x-2 overflow-x-auto">
         {/* Botón de reset a la izquierda */}
         {tabs.length < initialTabs.length && (

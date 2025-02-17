@@ -7,9 +7,9 @@
 
 @layer base {
   * {
-    @apply antialiased overflow-hidden font-sans;
+    @apply antialiased font-sans;
   }
   body {
-    @apply h-screen w-screen bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white border-2 border-gray-200 rounded-lg;
+    @apply w-screen overflow-auto mt-12 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white border-2 border-gray-200 rounded-lg;
   }
 }

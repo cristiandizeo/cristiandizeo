@@ -4,9 +4,9 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-950 text-white px-6">
+    <main className="h-screen overflow-auto flex flex-col items-center justify-center bg-gray-950 text-white px-6">
       {/* Título con animación de escritura */}
-      <h1 className="text-5xl/[2] md:text-7xl/[2] font-bold text-center mb-4">
+      <h1 className="relative text-5xl/[2] md:text-7xl/[2] font-bold text-center mb-4">
         <TypeAnimation
           sequence={[
             "CRISTIAN DIZEO",
@@ -38,7 +38,7 @@ export default function Home() {
   </div>
 
   {/* Código con sintaxis destacada */}
-  <pre className="mt-2 text-sm leading-relaxed">
+  <pre className="mt-2 text-sm leading-relaxed overflow-x-auto">
     <code>
       <span className="text-blue-400">const</span> developer = {"{"}
       <br />

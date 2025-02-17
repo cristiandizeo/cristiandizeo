@@ -35,7 +35,7 @@ export default function Technologies() {
   return (
     <div className="text-center">
       {/* Botones de categorías */}
-      <div className="flex justify-center space-x-4 mb-6">
+      <div className="flex justify-center space-x-4 mb-2">
         {Object.keys(categories).map((category) => (
           <button
             key={category}

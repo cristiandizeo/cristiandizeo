@@ -21,7 +21,7 @@ export default function Contact() {
       <motion.pre
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="bg-[#252526] border border-gray-700 p-5 rounded-lg text-gray-300 w-[90%] max-w-lg text-sm"
+        className="overflow-x-auto bg-[#252526] border border-gray-700 p-5 rounded-lg text-gray-300 w-[90%] max-w-lg text-sm"
       >
         <code>
           {`{\n`}
@@ -75,7 +75,7 @@ export default function Contact() {
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mt-6 text-gray-400 text-sm"
+        className="mt-6 text-center text-gray-400 text-sm"
       >
         🚀 **Disponible para proyectos y colaboraciones.** ¡Escríbeme! 💬
       </motion.p>
