@@ -10,6 +10,6 @@
     @apply antialiased font-sans;
   }
   body {
-    @apply w-screen overflow-auto mt-12 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white border-2 border-gray-200 rounded-lg;
+    @apply w-screen overflow-y-auto overflow-x-hidden mt-12 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-white border-2 border-gray-200 rounded-lg;
   }
 }
