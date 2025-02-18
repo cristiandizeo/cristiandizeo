@@ -135,6 +135,7 @@ export default function Portfolio() {
                     alt={project.name}
                     fill
                     className="object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                    priority
                   />
                   <button
                     onClick={() => toggleProject(name)}

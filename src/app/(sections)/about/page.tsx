@@ -23,6 +23,7 @@ export default function About() {
             width={250}
             height={250}
             className="mx-auto grayscale rounded-full border-2 border-white"
+            priority
           />
            {/* Información Personal */}
            <div className="mt-6 space-y-3 bg-gray-900 p-4 rounded-lg w-full text-sm">
