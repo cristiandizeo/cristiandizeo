@@ -1,62 +1,220 @@
 "use client";
 
+import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
-    <main className="h-screen overflow-auto flex flex-col items-center justify-center bg-gray-950 text-white px-6">
-      {/* Título con animación de escritura */}
-      <h1 className="relative text-5xl/[2] md:text-7xl/[2] font-bold text-center mb-4">
-        <TypeAnimation
-          sequence={[
-            "CRISTIAN DIZEO",
-            1500,
-            "Desarrollador Web",
-            1500,
-            "React | Next.js | TypeScript",
-            1500,
-          ]}
-          speed={50}
-          repeat={Infinity}
-        />
-      </h1>
+    <main className="w-full flex flex-col items-center justify-center mt-4">
+      
+      {/* Efectos de fondo */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+      </div>
+        
+        {/* Título con animación de escritura */}
+        <div className="text-center my-12">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 
+                         bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 
+                         dark:from-blue-300 dark:via-purple-300 dark:to-cyan-300 
+                         bg-clip-text text-transparent leading-tight">
+            <TypeAnimation
+              sequence={[
+                "CRISTIAN DIZEO",
+                2000,
+                "Fullstack developer",
+                2000,
+                "Systems analyst",
+                2000,
+                "Web & Mobile",
+                2000,
+              ]}
+              speed={50}
+              repeat={Infinity}
+              wrapper="span"
+              cursor={true}
+              style={{ display: 'inline-block', minHeight: '1.2em' }}
+            />
+          </h1>
 
-      <p className="text-xl text-gray-400 text-center mb-8">
-        Transformando ideas en código eficiente y escalable.
-      </p>
+          <p className="text-lg sm:text-xl text-gray-800 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            Transformando ideas en código eficiente y escalable con tecnologías modernas.
+          </p>
+        </div>
 
-      {/* Caja estilo terminal con "Sobre Mí" */}
-      <div className="bg-gray-950 text-gray-300 font-mono rounded-lg p-4 shadow-lg w-full max-w-2xl mx-auto relative">
-  {/* Barra superior de VS Code */}
-  <div className="flex items-center bg-[#252526] px-3 py-1 rounded-t-lg text-sm text-gray-400">
-    <div className="flex space-x-2">
-      <span className="w-3 h-3 bg-red-500 rounded-full"></span>
-      <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
-      <span className="w-3 h-3 bg-green-500 rounded-full"></span>
-    </div>
-    <span className="ml-3">developer.js</span>
-  </div>
+        {/* Caja estilo terminal mejorada */}
+        <div className="bg-gray-800/90 dark:bg-gray-900/90 backdrop-blur-sm 
+                        border border-gray-700/50 dark:border-gray-600/50
+                        text-gray-300 dark:text-gray-200 font-mono rounded-xl 
+                        shadow-2xl w-full max-w-3xl mx-auto relative
+                        hover:shadow-blue-500/10 transition-all duration-300">
+          
+          {/* Barra superior del editor */}
+          <div className="flex items-center justify-between bg-gray-700/80 dark:bg-gray-800/80 
+                          px-4 py-3 rounded-t-xl border-b border-gray-600/50">
+            <div className="flex items-center space-x-3">
+              <div className="flex space-x-2">
+                <span className="w-3 h-3 bg-red-500 hover:bg-red-400 rounded-full transition-colors cursor-pointer"></span>
+                <span className="w-3 h-3 bg-yellow-500 hover:bg-yellow-400 rounded-full transition-colors cursor-pointer"></span>
+                <span className="w-3 h-3 bg-green-500 hover:bg-green-400 rounded-full transition-colors cursor-pointer"></span>
+              </div>
+              <span className="text-sm text-gray-400 dark:text-gray-300">developer.js</span>
+            </div>
+            <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
+              <span>UTF-8</span>
+              <span>•</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
 
-  {/* Código con sintaxis destacada */}
-  <pre className="mt-2 text-sm leading-relaxed overflow-x-auto">
-    <code>
-      <span className="text-blue-400">const</span> developer = {"{"}
-      <br />
-      &nbsp;&nbsp;<span className="text-blue-200">name</span>: <span className="text-orange-400">"Cristian Dizeo"</span>,
-      <br />
-      &nbsp;&nbsp;<span className="text-blue-200">role</span>: [<span className="text-orange-400">"Frontend Developer"</span>, <span className="text-orange-400">"Backend Developer"</span>],
-      <br />
-      &nbsp;&nbsp;<span className="text-blue-200">years_xp</span>: <span className="text-red-400">5</span>,
-      <br />
-      &nbsp;&nbsp;<span className="text-blue-200">currentlyLearning</span>: [<span className="text-orange-400">"English conversation"</span>, <span className="text-orange-400">"AI Integrations"</span>],
-      <br />
-      &nbsp;&nbsp;<span className="text-blue-200">contact</span>: <span className="text-orange-400">"dizeoc@gmail.com"</span>
-      <br />
-      {"};"}
-    </code>
-  </pre>
-</div>
+          {/* Código con sintaxis destacada mejorada */}
+          <div className="p-6">
+            <pre className="text-sm sm:text-base leading-relaxed overflow-x-auto">
+              <code className="block">
+                <span className="text-purple-400 dark:text-purple-300">const</span>{" "}
+                <span className="text-blue-300 dark:text-blue-200">developer</span>{" "}
+                <span className="text-gray-300 dark:text-gray-200">=</span>{" "}
+                <span className="text-yellow-400 dark:text-yellow-300">{"{"}</span>
+                <br />
+                
+                <span className="ml-4 text-cyan-400 dark:text-cyan-300">name</span>
+                <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
+                <span className="text-green-400 dark:text-green-300">"Cristian Dizeo"</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>
+                <br />
+                
+                <span className="ml-4 text-cyan-400 dark:text-cyan-300">role</span>
+                <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
+                <span className="text-yellow-400 dark:text-yellow-300">[</span>
+                <span className="text-green-400 dark:text-green-300">"Full Stack Developer"</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>{" "}
+                <span className="text-green-400 dark:text-green-300">"Frontend Specialist"</span>
+                <span className="text-yellow-400 dark:text-yellow-300">]</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>
+                <br />
+                
+                <span className="ml-4 text-cyan-400 dark:text-cyan-300">experience</span>
+                <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
+                <span className="text-green-400 dark:text-green-300">"5+ years"</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>
+                <br />
+                
+                <span className="ml-4 text-cyan-400 dark:text-cyan-300">skills</span>
+                <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
+                <span className="text-yellow-400 dark:text-yellow-300">[</span>
+                <br />
+                <span className="ml-8 text-green-400 dark:text-green-300">"React"</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>{" "}
+                <span className="text-green-400 dark:text-green-300">"React Native"</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>{" "}
+                <span className="text-green-400 dark:text-green-300">"Next.js"</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>
+                <br />
+                <span className="ml-8 text-green-400 dark:text-green-300">"Supabase"</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>{" "}
+                <span className="text-green-400 dark:text-green-300">"TypeScript"</span>
+                <br />
+                <span className="ml-4 text-yellow-400 dark:text-yellow-300">]</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>
+                <br />
+                
+                <span className="ml-4 text-cyan-400 dark:text-cyan-300">currentlyLearning</span>
+                <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
+                <span className="text-yellow-400 dark:text-yellow-300">[</span>
+                <span className="text-green-400 dark:text-green-300">"English Conversation"</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>{" "}
+                <span className="text-green-400 dark:text-green-300">"Cloud Services"</span>
+                <span className="text-yellow-400 dark:text-yellow-300">]</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>
+                <br />
+                
+                <span className="ml-4 text-cyan-400 dark:text-cyan-300">location</span>
+                <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
+                <span className="text-green-400 dark:text-green-300">"Santa Rosa, La Pampa, Argentina"</span>
+                <span className="text-gray-300 dark:text-gray-200">,</span>
+                <br />
+                
+                <span className="ml-4 text-cyan-400 dark:text-cyan-300">contact</span>
+                <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
+                <span className="text-yellow-400 dark:text-yellow-300">{"{"}</span>
+                <br />
+                
+                <span className="ml-8 text-cyan-400 dark:text-cyan-300">email</span>
+                <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
+                <Link 
+                  href="mailto:dizeocristian@gmail.com"
+                  className="text-green-400 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
+                           hover:underline transition-all duration-200 cursor-pointer"
+                >
+                  "dizeocristian@gmail.com"
+                </Link>
+                <span className="text-gray-300 dark:text-gray-200">,</span>
+                <br />
+                
+                <span className="ml-8 text-cyan-400 dark:text-cyan-300">linkedin</span>
+                <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
+                <Link 
+                  href="https://linkedin.com/in/cristian-dizeo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-400 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
+                           hover:underline transition-all duration-200 cursor-pointer"
+                >
+                  "linkedin.com/in/cristian-dizeo"
+                </Link>
+                <span className="text-gray-300 dark:text-gray-200">,</span>
+                <br />
+                
+                <span className="ml-8 text-cyan-400 dark:text-cyan-300">github</span>
+                <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
+                <Link 
+                  href="https://github.com/cristiandizeo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-400 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
+                           hover:underline transition-all duration-200 cursor-pointer"
+                >
+                  "github.com/cristiandizeo"
+                </Link>
+                <br />
+                
+                <span className="ml-4 text-yellow-400 dark:text-yellow-300">{"}"}</span>
+                <br />
+                
+                <span className="text-yellow-400 dark:text-yellow-300">{"}"}</span>
+                <span className="text-gray-300 dark:text-gray-200">;</span>
+                <br />
+                <br />
+                
+                {/* Línea adicional con efecto de cursor parpadeante */}
+                <span className="text-gray-500 dark:text-gray-600">
+                  // Ready to create amazing things ✨
+                </span>
+              </code>
+            </pre>
+          </div>
+        </div>
 
+        {/* Botón de acción (opcional) */}
+        <div className="text-center">
+          <div className="inline-flex items-center space-x-4">
+            <div className="w-2 h-2 bg-green-400 dark:bg-green-300 rounded-full animate-pulse"></div>
+            <span className="text-sm text-gray-400 dark:text-gray-500 font-mono">
+              Available for new opportunities
+            </span>
+          </div>
+        </div>
 
     </main>
   );
