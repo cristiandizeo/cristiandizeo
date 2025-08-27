@@ -26,7 +26,7 @@ export default function Home() {
         {/* Título con animación de escritura */}
         <div className="text-center my-12">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6 
-                         bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 
+                         bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-500 
                          dark:from-blue-300 dark:via-purple-300 dark:to-cyan-300 
                          bg-clip-text text-transparent leading-tight">
             <TypeAnimation
@@ -54,107 +54,115 @@ export default function Home() {
         </div>
 
         {/* Caja estilo terminal mejorada */}
-        <div className="bg-gray-800/90 dark:bg-gray-900/90 backdrop-blur-sm 
-                        border border-gray-700/50 dark:border-gray-600/50
-                        text-gray-300 dark:text-gray-200 font-mono rounded-xl 
-                        shadow-2xl w-full max-w-3xl mx-auto relative
-                        hover:shadow-blue-500/10 transition-all duration-300">
-          
-          {/* Barra superior del editor */}
-          <div className="flex items-center justify-between bg-gray-700/80 dark:bg-gray-800/80 
-                          px-4 py-3 rounded-t-xl border-b border-gray-600/50">
-            <div className="flex items-center space-x-3">
-              <div className="flex space-x-2">
-                <span className="w-3 h-3 bg-red-500 hover:bg-red-400 rounded-full transition-colors cursor-pointer"></span>
-                <span className="w-3 h-3 bg-yellow-500 hover:bg-yellow-400 rounded-full transition-colors cursor-pointer"></span>
-                <span className="w-3 h-3 bg-green-500 hover:bg-green-400 rounded-full transition-colors cursor-pointer"></span>
-              </div>
-              <span className="text-sm text-gray-400 dark:text-gray-300">developer.js</span>
-            </div>
-            <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
-              <span>UTF-8</span>
-              <span>•</span>
-              <span>JavaScript</span>
-            </div>
-          </div>
+{/* Caja estilo terminal mejorada */}
+<div
+  className="bg-gray-100 dark:bg-gray-900 backdrop-blur-sm 
+             border border-gray-300 dark:border-gray-700
+             text-gray-800 dark:text-gray-200 font-mono rounded-xl 
+             shadow-2xl w-full max-w-3xl mx-auto relative
+             hover:shadow-blue-500/10 transition-all duration-300"
+>
+  {/* Barra superior del editor */}
+  <div
+    className="flex items-center justify-between 
+               bg-gray-200 dark:bg-gray-800 
+               px-4 py-3 rounded-t-xl 
+               border-b border-gray-300 dark:border-gray-700"
+  >
+    <div className="flex items-center space-x-3">
+      <div className="flex space-x-2">
+        <span className="w-3 h-3 bg-red-500 hover:bg-red-400 rounded-full transition-colors cursor-pointer"></span>
+        <span className="w-3 h-3 bg-yellow-500 hover:bg-yellow-400 rounded-full transition-colors cursor-pointer"></span>
+        <span className="w-3 h-3 bg-green-500 hover:bg-green-400 rounded-full transition-colors cursor-pointer"></span>
+      </div>
+      <span className="text-sm text-gray-600 dark:text-gray-300">
+        developer.js
+      </span>
+    </div>
+    <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
+      <span>UTF-8</span>
+      <span>•</span>
+      <span>JavaScript</span>
+    </div>
+  </div>
 
-          {/* Código con sintaxis destacada mejorada */}
-          <div className="p-6">
-            <pre className="text-sm sm:text-base leading-relaxed overflow-x-auto">
-              <code className="block">
-                <span className="text-purple-400 dark:text-purple-300">const</span>{" "}
-                <span className="text-blue-300 dark:text-blue-200">developer</span>{" "}
-                <span className="text-gray-300 dark:text-gray-200">=</span>{" "}
-                <span className="text-yellow-400 dark:text-yellow-300">{"{"}</span>
-                <br />
+  {/* Código con sintaxis destacada */}
+  <div className="p-6 m-2 overflow-x-auto">
+    <pre className="text-sm sm:text-base leading-relaxed">
+      <code className="block">
+        <span className="text-purple-600 dark:text-purple-400">const</span>{" "}
+        <span className="text-blue-600 dark:text-blue-300">developer</span>{" "}
+        <span className="text-gray-800 dark:text-gray-200">=</span>{" "}
+        <span className="text-yellow-600 dark:text-yellow-300">{"{"}</span>
+        <br />
                 
-                <span className="ml-4 text-cyan-400 dark:text-cyan-300">name</span>
+                <span className="ml-4 text-cyan-500 dark:text-cyan-300">name</span>
                 <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
-                <span className="text-green-400 dark:text-green-300">"Cristian Dizeo"</span>
+                <span className="text-green-500 dark:text-green-300">"Cristian Dizeo"</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>
                 <br />
                 
-                <span className="ml-4 text-cyan-400 dark:text-cyan-300">role</span>
+                <span className="ml-4 text-cyan-500 dark:text-cyan-300">role</span>
                 <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
                 <span className="text-yellow-400 dark:text-yellow-300">[</span>
-                <span className="text-green-400 dark:text-green-300">"Full Stack Developer"</span>
+                <span className="text-green-500 dark:text-green-300">"Full Stack Developer"</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>{" "}
-                <span className="text-green-400 dark:text-green-300">"Frontend Specialist"</span>
+                <span className="text-green-500 dark:text-green-300">"Frontend Specialist"</span>
                 <span className="text-yellow-400 dark:text-yellow-300">]</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>
                 <br />
                 
-                <span className="ml-4 text-cyan-400 dark:text-cyan-300">experience</span>
+                <span className="ml-4 text-cyan-500 dark:text-cyan-300">experience</span>
                 <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
-                <span className="text-green-400 dark:text-green-300">"5+ years"</span>
+                <span className="text-green-500 dark:text-green-300">"5+ years"</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>
                 <br />
                 
-                <span className="ml-4 text-cyan-400 dark:text-cyan-300">skills</span>
+                <span className="ml-4 text-cyan-500 dark:text-cyan-300">skills</span>
                 <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
                 <span className="text-yellow-400 dark:text-yellow-300">[</span>
                 <br />
-                <span className="ml-8 text-green-400 dark:text-green-300">"React"</span>
+                <span className="ml-8 text-green-500 dark:text-green-300">"React"</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>{" "}
-                <span className="text-green-400 dark:text-green-300">"React Native"</span>
+                <span className="text-green-500 dark:text-green-300">"React Native"</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>{" "}
-                <span className="text-green-400 dark:text-green-300">"Next.js"</span>
+                <span className="text-green-500 dark:text-green-300">"Next.js"</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>
                 <br />
-                <span className="ml-8 text-green-400 dark:text-green-300">"Supabase"</span>
+                <span className="ml-8 text-green-500 dark:text-green-300">"Supabase"</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>{" "}
-                <span className="text-green-400 dark:text-green-300">"TypeScript"</span>
+                <span className="text-green-500 dark:text-green-300">"TypeScript"</span>
                 <br />
                 <span className="ml-4 text-yellow-400 dark:text-yellow-300">]</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>
                 <br />
                 
-                <span className="ml-4 text-cyan-400 dark:text-cyan-300">currentlyLearning</span>
+                <span className="ml-4 text-cyan-500 dark:text-cyan-300">currentlyLearning</span>
                 <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
                 <span className="text-yellow-400 dark:text-yellow-300">[</span>
-                <span className="text-green-400 dark:text-green-300">"English Conversation"</span>
+                <span className="text-green-500 dark:text-green-300">"English Conversation"</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>{" "}
-                <span className="text-green-400 dark:text-green-300">"Cloud Services"</span>
+                <span className="text-green-500 dark:text-green-300">"Cloud Services"</span>
                 <span className="text-yellow-400 dark:text-yellow-300">]</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>
                 <br />
                 
-                <span className="ml-4 text-cyan-400 dark:text-cyan-300">location</span>
+                <span className="ml-4 text-cyan-500 dark:text-cyan-300">location</span>
                 <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
-                <span className="text-green-400 dark:text-green-300">"Santa Rosa, La Pampa, Argentina"</span>
+                <span className="text-green-500 dark:text-green-300">"Santa Rosa, La Pampa, Argentina"</span>
                 <span className="text-gray-300 dark:text-gray-200">,</span>
                 <br />
                 
-                <span className="ml-4 text-cyan-400 dark:text-cyan-300">contact</span>
+                <span className="ml-4 text-cyan-500 dark:text-cyan-300">contact</span>
                 <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
                 <span className="text-yellow-400 dark:text-yellow-300">{"{"}</span>
                 <br />
                 
-                <span className="ml-8 text-cyan-400 dark:text-cyan-300">email</span>
+                <span className="ml-8 text-cyan-500 dark:text-cyan-300">email</span>
                 <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
                 <Link 
                   href="mailto:dizeocristian@gmail.com"
-                  className="text-green-400 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
+                  className="text-green-500 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
                            hover:underline transition-all duration-200 cursor-pointer"
                 >
                   "dizeocristian@gmail.com"
@@ -162,13 +170,13 @@ export default function Home() {
                 <span className="text-gray-300 dark:text-gray-200">,</span>
                 <br />
                 
-                <span className="ml-8 text-cyan-400 dark:text-cyan-300">linkedin</span>
+                <span className="ml-8 text-cyan-500 dark:text-cyan-300">linkedin</span>
                 <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
                 <Link 
                   href="https://linkedin.com/in/cristian-dizeo"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green-400 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
+                  className="text-green-500 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
                            hover:underline transition-all duration-200 cursor-pointer"
                 >
                   "linkedin.com/in/cristian-dizeo"
@@ -176,13 +184,13 @@ export default function Home() {
                 <span className="text-gray-300 dark:text-gray-200">,</span>
                 <br />
                 
-                <span className="ml-8 text-cyan-400 dark:text-cyan-300">github</span>
+                <span className="ml-8 text-cyan-500 dark:text-cyan-300">github</span>
                 <span className="text-gray-300 dark:text-gray-200">:</span>{" "}
                 <Link 
                   href="https://github.com/cristiandizeo"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green-400 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
+                  className="text-green-500 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
                            hover:underline transition-all duration-200 cursor-pointer"
                 >
                   "github.com/cristiandizeo"

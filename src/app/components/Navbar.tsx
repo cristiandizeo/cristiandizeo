@@ -98,8 +98,8 @@ export default function Navbar() {
   };
 
   return (
-    <div className="relative mb-20">
-    <div className="fixed mb-20 top-0 w-full z-50
+    <div className="relative mt-16">
+    <div className="fixed bg-white dark:bg-black top-0 w-full z-50
                     shadow-lg">
       
       {/* Barra superior estilo VS Code */}
@@ -134,7 +134,7 @@ export default function Navbar() {
       </div>
 
       {/* Barra de pestañas */}
-      <div className="flex items-center justify-between px-2 md:px-4 pt-2 h-12">
+      <div className="flex items-center justify-between px-2 md:px-4 mt-2">
         
         {/* Contenedor izquierdo: reset + tabs */}
         <div className="flex items-center space-x-1 flex-1 min-w-0">
@@ -177,9 +177,9 @@ export default function Navbar() {
                                 ? `bg-gray-200 dark:bg-gray-900 text-black dark:text-white 
                                    border-gray-600 dark:border-gray-500
                                    shadow-lg`
-                                : `bg-gray-700/50 dark:bg-gray-800/50 text-gray-300 dark:text-gray-400 
+                                : `bg-gray-300 dark:bg-gray-800/50 text-gray-100 dark:text-gray-400 
                                    border-gray-600/50 dark:border-gray-500/50 
-                                   hover:bg-gray-600 dark:hover:bg-gray-800
+                                   hover:bg-gray-400 dark:hover:bg-gray-800
                                    hover:text-white`
                             }`}
                 >
@@ -231,7 +231,7 @@ export default function Navbar() {
         </div>
 
         {/* Contenedor derecho: ModeToggle */}
-        <div className="flex-shrink-0 ml-4">
+        <div className="flex-shrink-0">
           <ModeToggle />
         </div>
       </div>
