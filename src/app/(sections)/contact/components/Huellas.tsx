@@ -1,35 +1,37 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 type Huella = {
-  nombre: string;
-  mensaje: string;
-  emoji: string;
-  fecha: string;
-};
+  nombre: string
+  mensaje: string
+  emoji: string
+  fecha: string
+}
 
 export default function Huellas() {
-  const [huellas, setHuellas] = useState<Huella[]>([]);
-  const [nombre, setNombre] = useState("");
-  const [mensaje, setMensaje] = useState("");
-  const [emoji, setEmoji] = useState("🐾");
+  const [huellas, setHuellas] = useState<Huella[]>([])
+  const [nombre, setNombre] = useState('')
+  const [mensaje, setMensaje] = useState('')
+  const [emoji, setEmoji] = useState('🐾')
 
   const agregarHuella = () => {
-    if (!nombre || !mensaje) return;
+    if (!nombre || !mensaje) return
     const nueva: Huella = {
       nombre,
       mensaje,
       emoji,
       fecha: new Date().toLocaleDateString(),
-    };
-    setHuellas([nueva, ...huellas]);
-    setNombre("");
-    setMensaje("");
-  };
+    }
+    setHuellas([nueva, ...huellas])
+    setNombre('')
+    setMensaje('')
+  }
 
   return (
-    <div className="mt-10 w-full max-w-xl mx-auto p-6 rounded-xl 
+    <div
+      className="mt-10 w-full max-w-xl mx-auto p-6 rounded-xl 
                     bg-gray-100 dark:bg-gray-900 
-                    text-gray-800 dark:text-gray-200 shadow-lg">
+                    text-gray-800 dark:text-gray-200 shadow-lg"
+    >
       <h2 className="text-xl font-bold mb-4">🐾 Deja tu huella</h2>
 
       <div className="space-y-3">
@@ -82,5 +84,5 @@ export default function Huellas() {
         ))}
       </div>
     </div>
-  );
+  )
 }

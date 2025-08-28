@@ -1,7 +1,7 @@
-"use client";
+'use client'
 
-import { JSX, useState } from "react";
-import { motion } from "framer-motion";
+import { JSX, useState } from 'react'
+import { motion } from 'framer-motion'
 import {
   FaReact,
   FaNodeJs,
@@ -12,7 +12,7 @@ import {
   FaDocker,
   FaLaravel,
   FaPhp,
-} from "react-icons/fa";
+} from 'react-icons/fa'
 import {
   SiNextdotjs,
   SiTailwindcss,
@@ -21,39 +21,36 @@ import {
   SiNestjs,
   SiTypescript,
   SiSupabase,
-} from "react-icons/si";
+} from 'react-icons/si'
 
 // Categorías con porcentaje de dominio
-const categories: Record<
-  string,
-  { name: string; icon: JSX.Element; proficiency: number }[]
-> = {
+const categories: Record<string, { name: string; icon: JSX.Element; proficiency: number }[]> = {
   Frontend: [
-    { name: "React", icon: <FaReact />, proficiency: 80 },
-    { name: "React Native", icon: <FaReact />, proficiency: 80 },
-    { name: "Next.js", icon: <SiNextdotjs />, proficiency: 85 },
-    { name: "TypeScript", icon: <SiTypescript />, proficiency: 80 },
-    { name: "TailwindCSS", icon: <SiTailwindcss />, proficiency: 90 },
-    { name: "JavaScript", icon: <FaJs />, proficiency: 85 },
-    { name: "HTML5", icon: <FaHtml5 />, proficiency: 95 },
-    { name: "CSS3", icon: <FaCss3Alt />, proficiency: 90 },
+    { name: 'React', icon: <FaReact />, proficiency: 80 },
+    { name: 'React Native', icon: <FaReact />, proficiency: 80 },
+    { name: 'Next.js', icon: <SiNextdotjs />, proficiency: 85 },
+    { name: 'TypeScript', icon: <SiTypescript />, proficiency: 80 },
+    { name: 'TailwindCSS', icon: <SiTailwindcss />, proficiency: 90 },
+    { name: 'JavaScript', icon: <FaJs />, proficiency: 85 },
+    { name: 'HTML5', icon: <FaHtml5 />, proficiency: 95 },
+    { name: 'CSS3', icon: <FaCss3Alt />, proficiency: 90 },
   ],
   Backend: [
-    { name: "Node.js", icon: <FaNodeJs />, proficiency: 80 },
-    { name: "Supabase", icon: <SiSupabase />, proficiency: 80 },
-    { name: "PHP", icon: <FaPhp />, proficiency: 75 },
-    { name: "Laravel", icon: <FaLaravel />, proficiency: 70 },
-    { name: "MongoDB", icon: <SiMongodb />, proficiency: 60 },
-    { name: "Firebase", icon: <SiFirebase />, proficiency: 60 },
+    { name: 'Node.js', icon: <FaNodeJs />, proficiency: 80 },
+    { name: 'Supabase', icon: <SiSupabase />, proficiency: 80 },
+    { name: 'PHP', icon: <FaPhp />, proficiency: 75 },
+    { name: 'Laravel', icon: <FaLaravel />, proficiency: 70 },
+    { name: 'MongoDB', icon: <SiMongodb />, proficiency: 60 },
+    { name: 'Firebase', icon: <SiFirebase />, proficiency: 60 },
   ],
   DevOps: [
-    { name: "Git/Github", icon: <FaGit />, proficiency: 85 },
-    { name: "Docker", icon: <FaDocker />, proficiency: 70 },
+    { name: 'Git/Github', icon: <FaGit />, proficiency: 85 },
+    { name: 'Docker', icon: <FaDocker />, proficiency: 70 },
   ],
-};
+}
 
 export default function Technologies() {
-  const [activeCategory, setActiveCategory] = useState("Frontend");
+  const [activeCategory, setActiveCategory] = useState('Frontend')
 
   return (
     <div className="text-center">
@@ -66,8 +63,8 @@ export default function Technologies() {
             className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all 
               ${
                 activeCategory === category
-                  ? "bg-teal-600 text-white"
-                  : "bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300"
+                  ? 'bg-teal-600 text-white'
+                  : 'bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
               }`}
           >
             {category}
@@ -108,5 +105,5 @@ export default function Technologies() {
         ))}
       </motion.div>
     </div>
-  );
+  )
 }

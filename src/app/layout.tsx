@@ -1,34 +1,34 @@
-import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react"
-import "./globals.css";
-import Navbar from "./components/Navbar";
-import { ThemeProvider } from "./components/theme-provider";
+import type { Metadata } from 'next'
+import { Analytics } from '@vercel/analytics/react'
+import './globals.css'
+import Navbar from './components/Navbar'
+import { ThemeProvider } from './components/theme-provider'
 
 export const metadata: Metadata = {
-  title: "Cristian Dizeo | Portfolio",
-  description: "Fullstack web developer",
-  icons: "/icon.svg"
-};
+  title: 'Cristian Dizeo | Portfolio',
+  description: 'Fullstack web developer',
+  icons: '/icon.svg',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <Analytics/>
+      <Analytics />
       <body>
-                  <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-        <Navbar />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
