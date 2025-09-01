@@ -408,7 +408,7 @@ export default function VSCodePortfolio(): JSX.Element {
               <div className="text-center">
                 <div className="text-6xl mb-4">👋</div>
                 <h2 className="text-2xl font-bold text-gray-700 dark:text-gray-300 mb-2">
-                  ¡Hola! Bienvenido a mi sitio
+                  ¡Hola! Bienvenid@ a mi sitio
                 </h2>
                 <p className="text-gray-600 dark:text-gray-500">
                   Para empezar, selecciona una sección o proyecto del explorador
