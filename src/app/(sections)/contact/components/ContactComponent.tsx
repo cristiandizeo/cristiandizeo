@@ -1,18 +1,17 @@
 'use client';
 
+import React from 'react';
 import { useState } from 'react';
-import { FaDiscord } from 'react-icons/fa';
-import { 
-  FiMail, 
-  FiUser, 
-  FiMessageSquare, 
-  FiSend, 
-  FiCheck, 
+import {
+  FiMail,
+  FiUser,
+  FiMessageSquare,
+  FiSend,
+  FiCheck,
   FiAlertCircle,
   FiGithub,
   FiLinkedin,
-  FiTwitter,
-  FiMapPin
+  FiMapPin,
 } from 'react-icons/fi';
 
 interface ContactFormData {
@@ -34,12 +33,14 @@ export default function ContactComponent() {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
-  
+
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -68,25 +69,27 @@ export default function ContactComponent() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-    
+
     // Limpiar error cuando el usuario comience a escribir
     if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: undefined
+        [name]: undefined,
       }));
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
 
     setIsSubmitting(true);
@@ -109,7 +112,7 @@ export default function ContactComponent() {
           name: '',
           email: '',
           subject: '',
-          message: ''
+          message: '',
         });
       } else {
         throw new Error('Error al enviar el mensaje');
@@ -127,7 +130,7 @@ export default function ContactComponent() {
       name: '',
       email: '',
       subject: '',
-      message: ''
+      message: '',
     });
     setErrors({});
     setSubmitStatus('idle');
@@ -142,8 +145,8 @@ export default function ContactComponent() {
             Contacto
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            ¿Tienes un proyecto en mente o quieres colaborar? Me encantaría escucharte. 
-            Envíame un mensaje y te responderé lo antes posible.
+            ¿Tienes un proyecto en mente o quieres colaborar? Me encantaría
+            escucharte. Envíame un mensaje y te responderé lo antes posible.
           </p>
         </div>
 
@@ -154,15 +157,19 @@ export default function ContactComponent() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                 Información de contacto
               </h2>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="flex-shrink-0 w-10 h-10 bg-blue-100 dark:bg-blue-900/20 rounded-lg flex items-center justify-center">
                     <FiMail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-gray-900 dark:text-white">Email</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">dizeocristian@gmail.com</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-white">
+                      Email
+                    </p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      dizeocristian@gmail.com
+                    </p>
                   </div>
                 </div>
 
@@ -171,8 +178,12 @@ export default function ContactComponent() {
                     <FiMapPin className="w-5 h-5 text-green-600 dark:text-green-400" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-gray-900 dark:text-white">Ubicación</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Santa Rosa, La Pampa, Argentina</p>
+                    <p className="text-sm font-medium text-gray-900 dark:text-white">
+                      Ubicación
+                    </p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      Santa Rosa, La Pampa, Argentina
+                    </p>
                   </div>
                 </div>
               </div>
@@ -209,8 +220,9 @@ export default function ContactComponent() {
                 ¿Prefieres una llamada?
               </h4>
               <p className="text-sm text-blue-700 dark:text-blue-300">
-                Si tienes un proyecto complejo o prefieres discutir los detalles por teléfono, 
-                no dudes en mencionarlo en tu mensaje y coordinaremos una llamada.
+                Si tienes un proyecto complejo o prefieres discutir los detalles
+                por teléfono, no dudes en mencionarlo en tu mensaje y
+                coordinaremos una llamada.
               </p>
             </div>
           </div>
@@ -243,7 +255,10 @@ export default function ContactComponent() {
 
                 {/* Nombre */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Nombre *
                   </label>
                   <div className="relative">
@@ -257,19 +272,26 @@ export default function ContactComponent() {
                       value={formData.name}
                       onChange={handleInputChange}
                       className={`block w-full pl-10 pr-3 py-3 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-white ${
-                        errors.name ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-600'
+                        errors.name
+                          ? 'border-red-500 dark:border-red-500'
+                          : 'border-gray-300 dark:border-gray-600'
                       }`}
                       placeholder="Tu nombre completo"
                     />
                   </div>
                   {errors.name && (
-                    <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.name}</p>
+                    <p className="mt-1 text-sm text-red-600 dark:text-red-400">
+                      {errors.name}
+                    </p>
                   )}
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Email *
                   </label>
                   <div className="relative">
@@ -283,19 +305,26 @@ export default function ContactComponent() {
                       value={formData.email}
                       onChange={handleInputChange}
                       className={`block w-full pl-10 pr-3 py-3 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-white ${
-                        errors.email ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-600'
+                        errors.email
+                          ? 'border-red-500 dark:border-red-500'
+                          : 'border-gray-300 dark:border-gray-600'
                       }`}
                       placeholder="tu@email.com"
                     />
                   </div>
                   {errors.email && (
-                    <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.email}</p>
+                    <p className="mt-1 text-sm text-red-600 dark:text-red-400">
+                      {errors.email}
+                    </p>
                   )}
                 </div>
 
                 {/* Asunto */}
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Asunto *
                   </label>
                   <input
@@ -305,18 +334,25 @@ export default function ContactComponent() {
                     value={formData.subject}
                     onChange={handleInputChange}
                     className={`block w-full px-3 py-3 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-white ${
-                      errors.subject ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-600'
+                      errors.subject
+                        ? 'border-red-500 dark:border-red-500'
+                        : 'border-gray-300 dark:border-gray-600'
                     }`}
                     placeholder="¿En qué puedo ayudarte?"
                   />
                   {errors.subject && (
-                    <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.subject}</p>
+                    <p className="mt-1 text-sm text-red-600 dark:text-red-400">
+                      {errors.subject}
+                    </p>
                   )}
                 </div>
 
                 {/* Mensaje */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Mensaje *
                   </label>
                   <div className="relative">
@@ -330,13 +366,17 @@ export default function ContactComponent() {
                       value={formData.message}
                       onChange={handleInputChange}
                       className={`block w-full pl-10 pr-3 py-3 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-500 dark:text-white resize-none ${
-                        errors.message ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-600'
+                        errors.message
+                          ? 'border-red-500 dark:border-red-500'
+                          : 'border-gray-300 dark:border-gray-600'
                       }`}
                       placeholder="Cuéntame sobre tu proyecto o idea..."
                     />
                   </div>
                   {errors.message && (
-                    <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.message}</p>
+                    <p className="mt-1 text-sm text-red-600 dark:text-red-400">
+                      {errors.message}
+                    </p>
                   )}
                   <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                     Mínimo 10 caracteres ({formData.message.length}/10)
@@ -349,7 +389,8 @@ export default function ContactComponent() {
                     <FiAlertCircle className="w-5 h-5 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-sm text-red-800 dark:text-red-400">
-                        Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo o contacta directamente por email.
+                        Hubo un error al enviar el mensaje. Por favor, inténtalo
+                        de nuevo o contacta directamente por email.
                       </p>
                     </div>
                   </div>

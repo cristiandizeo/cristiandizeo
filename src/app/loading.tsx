@@ -1,6 +1,7 @@
-'use client'
+'use client';
 
-import { motion } from 'framer-motion'
+import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function Loader() {
   return (
@@ -20,5 +21,5 @@ export default function Loader() {
         <div className="absolute w-1/2 h-1/2 border-4 border-transparent border-t-gray-300 rounded-full"></div>
       </motion.div>
     </motion.div>
-  )
+  );
 }

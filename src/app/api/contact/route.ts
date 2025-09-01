@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: 'Todos los campos son obligatorios' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { error: 'El email no es válido' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS, // App Password de Gmail
       },
-      
+
       // Opción 2: SMTP personalizado
       // host: process.env.SMTP_HOST,
       // port: parseInt(process.env.SMTP_PORT || '587'),
@@ -84,14 +84,17 @@ export async function POST(request: NextRequest) {
           
           <div style="margin-top: 20px; padding: 15px; background-color: #e3f2fd; border-radius: 8px; border-left: 4px solid #2196f3;">
             <small style="color: #1565c0;">
-              Este mensaje fue enviado desde tu formulario de contacto el ${new Date().toLocaleDateString('es-ES', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit'
-              })}.
+              Este mensaje fue enviado desde tu formulario de contacto el ${new Date().toLocaleDateString(
+                'es-ES',
+                {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                  hour: '2-digit',
+                  minute: '2-digit',
+                },
+              )}.
             </small>
           </div>
         </div>
@@ -151,19 +154,18 @@ export async function POST(request: NextRequest) {
     // Enviar ambos emails
     await Promise.all([
       transporter.sendMail(adminMailOptions),
-      transporter.sendMail(userMailOptions)
+      transporter.sendMail(userMailOptions),
     ]);
 
     return NextResponse.json(
       { message: 'Mensaje enviado correctamente' },
-      { status: 200 }
+      { status: 200 },
     );
-
   } catch (error) {
     console.error('Error al enviar email:', error);
     return NextResponse.json(
       { error: 'Error interno del servidor' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

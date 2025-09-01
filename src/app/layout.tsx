@@ -1,19 +1,20 @@
-import type { Metadata } from 'next'
-import { Analytics } from '@vercel/analytics/react'
-import './globals.css'
-import Navbar from './components/Navbar'
-import { ThemeProvider } from './components/theme-provider'
+import React from 'react';
+import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
+import './globals.css';
+import Navbar from './components/Navbar';
+import { ThemeProvider } from './components/theme-provider';
 
 export const metadata: Metadata = {
   title: 'Cristian Dizeo | Portfolio',
   description: 'Fullstack web developer',
   icons: '/icon.svg',
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
@@ -25,9 +26,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />{children}
+          <Navbar />
+          {children}
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

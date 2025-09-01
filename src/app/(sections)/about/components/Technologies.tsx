@@ -1,7 +1,8 @@
-'use client'
+'use client';
 
-import { JSX, useState } from 'react'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { JSX, useState } from 'react';
+import { motion } from 'framer-motion';
 import {
   FaReact,
   FaNodeJs,
@@ -12,19 +13,21 @@ import {
   FaDocker,
   FaLaravel,
   FaPhp,
-} from 'react-icons/fa'
+} from 'react-icons/fa';
 import {
   SiNextdotjs,
   SiTailwindcss,
   SiMongodb,
   SiFirebase,
-  SiNestjs,
   SiTypescript,
   SiSupabase,
-} from 'react-icons/si'
+} from 'react-icons/si';
 
 // Categorías con porcentaje de dominio
-const categories: Record<string, { name: string; icon: JSX.Element; proficiency: number }[]> = {
+const categories: Record<
+  string,
+  { name: string; icon: JSX.Element; proficiency: number }[]
+> = {
   Frontend: [
     { name: 'React', icon: <FaReact />, proficiency: 80 },
     { name: 'React Native', icon: <FaReact />, proficiency: 80 },
@@ -47,10 +50,10 @@ const categories: Record<string, { name: string; icon: JSX.Element; proficiency:
     { name: 'Git/Github', icon: <FaGit />, proficiency: 85 },
     { name: 'Docker', icon: <FaDocker />, proficiency: 70 },
   ],
-}
+};
 
 export default function Technologies() {
-  const [activeCategory, setActiveCategory] = useState('Frontend')
+  const [activeCategory, setActiveCategory] = useState('Frontend');
 
   return (
     <div className="text-center">
@@ -105,5 +108,5 @@ export default function Technologies() {
         ))}
       </motion.div>
     </div>
-  )
+  );
 }

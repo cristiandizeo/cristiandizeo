@@ -1,17 +1,18 @@
-'use client'
+'use client';
 
-import Link from 'next/link'
-import { TypeAnimation } from 'react-type-animation'
-import { useState, useEffect } from 'react'
+import React from 'react';
+import Link from 'next/link';
+import { TypeAnimation } from 'react-type-animation';
+import { useState, useEffect } from 'react';
 
 export default function HomeScreen() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
   return (
     <div className="flex flex-col items-center justify-center py-4">
@@ -50,7 +51,8 @@ export default function HomeScreen() {
         </h1>
 
         <p className="text-lg sm:text-xl text-gray-800 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          Transformando ideas en código eficiente y escalable con tecnologías modernas.
+          Transformando ideas en código eficiente y escalable con tecnologías
+          modernas.
         </p>
       </div>
 
@@ -75,7 +77,9 @@ export default function HomeScreen() {
               <span className="w-3 h-3 bg-yellow-500 hover:bg-yellow-400 rounded-full transition-colors cursor-pointer"></span>
               <span className="w-3 h-3 bg-green-500 hover:bg-green-400 rounded-full transition-colors cursor-pointer"></span>
             </div>
-            <span className="text-sm text-gray-600 dark:text-gray-300">developer.js</span>
+            <span className="text-sm text-gray-600 dark:text-gray-300">
+              developer.js
+            </span>
           </div>
           <div className="flex items-center space-x-2 text-xs text-gray-500 dark:text-gray-400">
             <span>UTF-8</span>
@@ -88,86 +92,136 @@ export default function HomeScreen() {
         <div className="p-6 m-2 overflow-x-auto">
           <pre className="text-sm sm:text-base leading-relaxed">
             <code className="block">
-              <span className="text-purple-600 dark:text-purple-400">const</span>{' '}
-              <span className="text-blue-600 dark:text-blue-300">developer</span>{' '}
+              <span className="text-purple-600 dark:text-purple-400">
+                const
+              </span>{' '}
+              <span className="text-blue-600 dark:text-blue-300">
+                developer
+              </span>{' '}
               <span className="text-gray-800 dark:text-gray-200">=</span>{' '}
-              <span className="text-yellow-600 dark:text-yellow-300">{'{'}</span>
+              <span className="text-yellow-600 dark:text-yellow-300">
+                {'{'}
+              </span>
               <br />
-              <span className="ml-4 text-cyan-500 dark:text-cyan-300">name</span>
-              <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
-              <span className="text-green-500 dark:text-green-300">"Cristian Dizeo"</span>
-              <span className="text-gray-300 dark:text-gray-200">,</span>
-              <br />
-              <span className="ml-4 text-cyan-500 dark:text-cyan-300">role</span>
-              <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
-              <span className="text-yellow-400 dark:text-yellow-300">[</span>
-              <span className="text-green-500 dark:text-green-300">"Full Stack Developer"</span>
-              <span className="text-gray-300 dark:text-gray-200">,</span>{' '}
-              <span className="text-green-500 dark:text-green-300">"Frontend Specialist"</span>
-              <span className="text-yellow-400 dark:text-yellow-300">]</span>
-              <span className="text-gray-300 dark:text-gray-200">,</span>
-              <br />
-              <span className="ml-4 text-cyan-500 dark:text-cyan-300">experience</span>
-              <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
-              <span className="text-green-500 dark:text-green-300">"5+ years"</span>
-              <span className="text-gray-300 dark:text-gray-200">,</span>
-              <br />
-              <span className="ml-4 text-cyan-500 dark:text-cyan-300">skills</span>
-              <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
-              <span className="text-yellow-400 dark:text-yellow-300">[</span>
-              <br />
-              <span className="ml-8 text-green-500 dark:text-green-300">"React"</span>
-              <span className="text-gray-300 dark:text-gray-200">,</span>{' '}
-              <span className="text-green-500 dark:text-green-300">"React Native"</span>
-              <span className="text-gray-300 dark:text-gray-200">,</span>{' '}
-              <span className="text-green-500 dark:text-green-300">"Next.js"</span>
-              <span className="text-gray-300 dark:text-gray-200">,</span>
-              <br />
-              <span className="ml-8 text-green-500 dark:text-green-300">"Supabase"</span>
-              <span className="text-gray-300 dark:text-gray-200">,</span>{' '}
-              <span className="text-green-500 dark:text-green-300">"TypeScript"</span>
-              <br />
-              <span className="ml-4 text-yellow-400 dark:text-yellow-300">]</span>
-              <span className="text-gray-300 dark:text-gray-200">,</span>
-              <br />
-              <span className="ml-4 text-cyan-500 dark:text-cyan-300">currentlyLearning</span>
-              <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
-              <span className="text-yellow-400 dark:text-yellow-300">[</span>
-              <span className="text-green-500 dark:text-green-300">"English Conversation"</span>
-              <span className="text-gray-300 dark:text-gray-200">,</span>{' '}
-              <span className="text-green-500 dark:text-green-300">"AI Integrations"</span>
-              <span className="text-yellow-400 dark:text-yellow-300">]</span>
-              <span className="text-gray-300 dark:text-gray-200">,</span>
-              <br />
-              <span className="ml-4 text-cyan-500 dark:text-cyan-300">location</span>
+              <span className="ml-4 text-cyan-500 dark:text-cyan-300">
+                name
+              </span>
               <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
               <span className="text-green-500 dark:text-green-300">
-                              <Link
-                href="https://share.google/vOB3ZjpMrNg1QNwqa"
-                className="text-green-500 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
+                &quot;Cristian Dizeo&quot;
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>
+              <br />
+              <span className="ml-4 text-cyan-500 dark:text-cyan-300">
+                role
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
+              <span className="text-yellow-400 dark:text-yellow-300">[</span>
+              <span className="text-green-500 dark:text-green-300">
+                &quot;Full Stack Developer&quot;
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>{' '}
+              <span className="text-green-500 dark:text-green-300">
+                &quot;Frontend Specialist&quot;
+              </span>
+              <span className="text-yellow-400 dark:text-yellow-300">]</span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>
+              <br />
+              <span className="ml-4 text-cyan-500 dark:text-cyan-300">
+                experience
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
+              <span className="text-green-500 dark:text-green-300">
+                &quot;5+ years&quot;
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>
+              <br />
+              <span className="ml-4 text-cyan-500 dark:text-cyan-300">
+                skills
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
+              <span className="text-yellow-400 dark:text-yellow-300">[</span>
+              <br />
+              <span className="ml-8 text-green-500 dark:text-green-300">
+                &quot;React&quot;
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>{' '}
+              <span className="text-green-500 dark:text-green-300">
+                &quot;React Native&quot;
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>{' '}
+              <span className="text-green-500 dark:text-green-300">
+                &quot;Next.js&quot;
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>
+              <br />
+              <span className="ml-8 text-green-500 dark:text-green-300">
+                &quot;Supabase&quot;
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>{' '}
+              <span className="text-green-500 dark:text-green-300">
+                &quot;TypeScript&quot;
+              </span>
+              <br />
+              <span className="ml-4 text-yellow-400 dark:text-yellow-300">
+                ]
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>
+              <br />
+              <span className="ml-4 text-cyan-500 dark:text-cyan-300">
+                currentlyLearning
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
+              <span className="text-yellow-400 dark:text-yellow-300">[</span>
+              <span className="text-green-500 dark:text-green-300">
+                &quot;English Conversation&quot;
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>{' '}
+              <span className="text-green-500 dark:text-green-300">
+                &quot;AI Integrations&quot;
+              </span>
+              <span className="text-yellow-400 dark:text-yellow-300">]</span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>
+              <br />
+              <span className="ml-4 text-cyan-500 dark:text-cyan-300">
+                location
+              </span>
+              <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
+              <span className="text-green-500 dark:text-green-300">
+                <Link
+                  href="https://share.google/vOB3ZjpMrNg1QNwqa"
+                  className="text-green-500 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
                            hover:underline transition-all duration-200 cursor-pointer"
-              >
-                "Santa Rosa, La Pampa, Argentina"
+                >
+                  &quot;Santa Rosa, La Pampa, Argentina&quot;
                 </Link>
               </span>
               <span className="text-gray-300 dark:text-gray-200">,</span>
               <br />
-              <span className="ml-4 text-cyan-500 dark:text-cyan-300">contact</span>
+              <span className="ml-4 text-cyan-500 dark:text-cyan-300">
+                contact
+              </span>
               <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
-              <span className="text-yellow-400 dark:text-yellow-300">{'{'}</span>
+              <span className="text-yellow-400 dark:text-yellow-300">
+                {'{'}
+              </span>
               <br />
-              <span className="ml-8 text-cyan-500 dark:text-cyan-300">email</span>
+              <span className="ml-8 text-cyan-500 dark:text-cyan-300">
+                email
+              </span>
               <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
               <Link
                 href="mailto:dizeocristian@gmail.com"
                 className="text-green-500 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
                            hover:underline transition-all duration-200 cursor-pointer"
               >
-                "dizeocristian@gmail.com"
+                &quot;dizeocristian@gmail.com&quot;
               </Link>
               <span className="text-gray-300 dark:text-gray-200">,</span>
               <br />
-              <span className="ml-8 text-cyan-500 dark:text-cyan-300">linkedin</span>
+              <span className="ml-8 text-cyan-500 dark:text-cyan-300">
+                linkedin
+              </span>
               <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
               <Link
                 href="https://linkedin.com/in/cristian-dizeo"
@@ -176,11 +230,13 @@ export default function HomeScreen() {
                 className="text-green-500 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
                            hover:underline transition-all duration-200 cursor-pointer"
               >
-                "linkedin.com/in/cristian-dizeo"
+                &quot;linkedin.com/in/cristian-dizeo&quot;
               </Link>
               <span className="text-gray-300 dark:text-gray-200">,</span>
               <br />
-              <span className="ml-8 text-cyan-500 dark:text-cyan-300">github</span>
+              <span className="ml-8 text-cyan-500 dark:text-cyan-300">
+                github
+              </span>
               <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
               <Link
                 href="https://github.com/cristiandizeo"
@@ -189,18 +245,22 @@ export default function HomeScreen() {
                 className="text-green-500 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
                            hover:underline transition-all duration-200 cursor-pointer"
               >
-                "github.com/cristiandizeo"
+                &quot;github.com/cristiandizeo&quot;
               </Link>
               <br />
-              <span className="ml-4 text-yellow-400 dark:text-yellow-300">{'}'}</span>
+              <span className="ml-4 text-yellow-400 dark:text-yellow-300">
+                {'}'}
+              </span>
               <br />
-              <span className="text-yellow-400 dark:text-yellow-300">{'}'}</span>
+              <span className="text-yellow-400 dark:text-yellow-300">
+                {'}'}
+              </span>
               <span className="text-gray-300 dark:text-gray-200">;</span>
               <br />
               <br />
               {/* Línea adicional con efecto de cursor parpadeante */}
               <span className="text-gray-500 dark:text-gray-600">
-                // Ready to create amazing things ✨
+                {'//'} Ready to create amazing things ✨
               </span>
             </code>
           </pre>
@@ -217,5 +277,5 @@ export default function HomeScreen() {
         </div>
       </div>
     </div>
-  )
+  );
 }

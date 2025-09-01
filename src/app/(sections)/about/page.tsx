@@ -1,10 +1,9 @@
-'use client'
+'use client';
 
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import Technologies from './components/Technologies'
-import { FaChild, FaGamepad, FaHeart, FaUserGraduate } from 'react-icons/fa'
-import { FaLocationPin } from 'react-icons/fa6'
+import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import Technologies from './components/Technologies';
 
 export default function About() {
   return (
@@ -37,11 +36,19 @@ export default function About() {
               </h2>
 
               <p className="mt-4 text-left leading-normal">
-                Vivo en <span className="font-semibold">Santa Rosa, La Pampa, Argentina</span>. Soy{' '}
-                <span className="font-semibold">Analista de sistemas informáticos</span> y orgulloso
-                papá de <span className="font-semibold">3 niñas</span>. Estoy{' '}
-                <span className="font-semibold">casado</span> y disfruto mucho compartir mi tiempo
-                libre jugando al <span className="font-semibold">fútbol</span>,{' '}
+                Vivo en{' '}
+                <span className="font-semibold">
+                  Santa Rosa, La Pampa, Argentina
+                </span>
+                . Soy{' '}
+                <span className="font-semibold">
+                  Analista de sistemas informáticos
+                </span>{' '}
+                y orgulloso papá de{' '}
+                <span className="font-semibold">3 niñas</span>. Estoy{' '}
+                <span className="font-semibold">casado</span> y disfruto mucho
+                compartir mi tiempo libre jugando al{' '}
+                <span className="font-semibold">fútbol</span>,{' '}
                 <span className="font-semibold">viajando</span>, explorando la{' '}
                 <span className="font-semibold">astrofotografía</span> y jugando{' '}
                 <span className="font-semibold">videojuegos</span>.
@@ -51,11 +58,16 @@ export default function About() {
         </div>
 
         <div className="w-full md:w-2/3 space-y-6 p-4">
-          <h2 className="text-4xl font-bold text-teal-500 dark:text-teal-300">Sobre mí</h2>
+          <h2 className="text-4xl font-bold text-teal-500 dark:text-teal-300">
+            Sobre mí
+          </h2>
           <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-            Soy <span className="text-teal-500 dark:text-teal-300">Cristian Dizeo</span>, un
-            desarrollador web apasionado por crear experiencias digitales innovadoras. Actualmente
-            me gusta trabajar con
+            Soy{' '}
+            <span className="text-teal-500 dark:text-teal-300">
+              Cristian Dizeo
+            </span>
+            , un desarrollador web apasionado por crear experiencias digitales
+            innovadoras. Actualmente me gusta trabajar con
             <span className="text-teal-500 dark:text-teal-300">
               {' '}
               Next.js, Tailwind y TypeScript
@@ -76,5 +88,5 @@ export default function About() {
         </div>
       </div>
     </div>
-  )
+  );
 }
