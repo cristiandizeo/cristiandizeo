@@ -142,7 +142,13 @@ export default function HomeScreen() {
               <span className="ml-4 text-cyan-500 dark:text-cyan-300">location</span>
               <span className="text-gray-300 dark:text-gray-200">:</span>{' '}
               <span className="text-green-500 dark:text-green-300">
+                              <Link
+                href="https://share.google/vOB3ZjpMrNg1QNwqa"
+                className="text-green-500 dark:text-green-300 hover:text-green-300 dark:hover:text-green-200 
+                           hover:underline transition-all duration-200 cursor-pointer"
+              >
                 "Santa Rosa, La Pampa, Argentina"
+                </Link>
               </span>
               <span className="text-gray-300 dark:text-gray-200">,</span>
               <br />
