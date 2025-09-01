@@ -9,7 +9,7 @@
     @apply antialiased font-sans;
   }
   body {
-    @apply w-screen overflow-y-scroll overflow-x-hidden bg-gradient-to-br from-white to-slate-200 
+    @apply bg-gradient-to-br from-white to-slate-200 
                      dark:from-gray-950 dark:via-black dark:to-gray-900 
                      text-white;
   }
@@ -112,14 +112,5 @@
     --chart-4: 280 65% 60%;
 
     --chart-5: 340 75% 55%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }

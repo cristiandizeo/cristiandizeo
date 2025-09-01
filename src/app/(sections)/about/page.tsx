@@ -8,7 +8,7 @@ import { FaLocationPin } from 'react-icons/fa6'
 
 export default function About() {
   return (
-    <div className="h-screen p-4 justify-center overflow-auto">
+    <div className="p-4 justify-center">
       <div className="flex flex-col md:flex-row h-full space-x-4 space-y-4">
         {/* Columna Izquierda - Imagen */}
         <div className="w-full md:w-1/3 flex justify-center items-center">
@@ -36,7 +36,7 @@ export default function About() {
                 Sobre mí
               </h2>
 
-              <p className="mt-4 leading-relaxed text-justify">
+              <p className="mt-4 text-left leading-normal">
                 Vivo en <span className="font-semibold">Santa Rosa, La Pampa, Argentina</span>. Soy{' '}
                 <span className="font-semibold">Analista de sistemas informáticos</span> y orgulloso
                 papá de <span className="font-semibold">3 niñas</span>. Estoy{' '}

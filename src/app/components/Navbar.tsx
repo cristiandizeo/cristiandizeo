@@ -98,7 +98,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="relative bg-white dark:bg-black top-0 w-full z-50
+    <div className="bg-white dark:bg-black w-full z-50
                     shadow-lg">
       
       {/* Barra superior estilo VS Code */}
