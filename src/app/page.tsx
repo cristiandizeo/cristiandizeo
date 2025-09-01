@@ -21,6 +21,8 @@ import { VscJson } from 'react-icons/vsc';
 import { SiTypescript } from 'react-icons/si';
 import { DiHtml5, DiReact } from 'react-icons/di';
 import { FaLaravel, FaPhp } from 'react-icons/fa';
+import Curriculum from './curriculum';
+import { FiFileText } from 'react-icons/fi';
 
 // Tipo base para archivos navegables
 interface BaseFile {
@@ -94,17 +96,39 @@ const sections: Section[] = [
     color: 'text-orange-400',
     bgColor: 'bg-orange-500/10',
   },
+  {
+    name: 'CV',
+    fileName: 'CV.txt',
+    description: 'Curriculum Vitae',
+    type: 'section',
+    icon: <FiFileText className="text-gray dark:white" size={16} />,
+    content: <Curriculum />,
+    color: 'text-orange-400',
+    bgColor: 'bg-orange-500/10',
+  },
 ];
 
 // Proyectos (estructura original mantenida)
 const projects: Project[] = [
+  {
+    name: 'Algorífica',
+    fileName: 'Algorifica.tsx',
+    description:
+      'Diseño, desarrollo y gestión de presencia digital con un enfoque estratégico y personalizado.',
+    type: 'project',
+    tech: ['React', 'TypeScript', 'Nextjs', 'Tailwind'],
+    codeUrl: '#',
+    liveUrl: 'https://algorifica.com.ar/',
+    color: 'text-blue-400',
+    bgColor: 'bg-blue-500/10',
+  },
   {
     name: 'Vocaltech',
     fileName: 'Vocaltech.tsx',
     description:
       'Plataforma innovadora que combina la voz y la tecnología para potenciar marcas y desarrollar talento.',
     type: 'project',
-    tech: ['React', 'TypeScript', 'Zustand'],
+    tech: ['React', 'TypeScript', 'Zustand', 'Tailwind'],
     codeUrl: 'https://github.com/No-Country-simulation/equipo-h4-01-vocaltech',
     liveUrl: 'https://equipo-h4-01-vocaltech.vercel.app/',
     color: 'text-blue-400',
@@ -351,28 +375,28 @@ export default function VSCodePortfolio(): JSX.Element {
         <div className="flex bg-gray-100 dark:bg-gray-800 border-b border-gray-300 dark:border-gray-700 overflow-x-auto flex-shrink-0">
           <div className="flex min-w-max">
             {activeTabs.map((tab) => (
-              <button
+              <div
                 key={tab.name}
-                onClick={() => setActiveTab(tab.name)}
-                className={`flex items-center gap-2 px-4 py-2 text-sm border-r border-gray-300 dark:border-gray-700 whitespace-nowrap transition-colors ${
+                className={`flex items-center gap-2 w-40 justify-between px-2 py-2 text-sm border-r border-gray-300 dark:border-gray-700 whitespace-nowrap transition-colors ${
                   activeTab === tab.name
                     ? 'bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-b-2 border-blue-500 dark:border-blue-400'
                     : 'text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
-                }`}
+                } cursor-pointer`}
+                onClick={() => setActiveTab(tab.name)}
               >
                 {typeof getFileIcon(tab) === 'string' ? (
                   <span>{getFileIcon(tab)}</span>
                 ) : (
                   getFileIcon(tab)
                 )}
-                <span>{tab.fileName}</span>
+                <span className="truncate">{tab.fileName}</span>
                 <button
                   onClick={(e) => closeTab(tab.name, e)}
                   className="ml-2 hover:bg-gray-300 dark:hover:bg-gray-600 rounded p-0.5 transition-colors"
                 >
                   <X size={12} />
                 </button>
-              </button>
+              </div>
             ))}
           </div>
         </div>

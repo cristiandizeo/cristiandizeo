@@ -162,6 +162,10 @@ export default function HomeScreen() {
               <span className="text-green-500 dark:text-green-300">
                 &quot;TypeScript&quot;
               </span>
+              <span className="text-gray-300 dark:text-gray-200">,</span>{' '}
+              <span className="text-green-500 dark:text-green-300">
+                &quot;TailwindCSS&quot;
+              </span>
               <br />
               <span className="ml-4 text-yellow-400 dark:text-yellow-300">
                 ]
