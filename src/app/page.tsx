@@ -598,7 +598,7 @@ export default function VSCodePortfolio(): React.ReactElement {
                 <h1 className="text-2xl font-bold text-gray-700 dark:text-gray-300 mb-2">
                   ¡Hola! Bienvenid@ a mi sitio
                 </h1>
-                <p className="text-gray-600 dark:text-gray-500">
+                <p className="text-gray-600 dark:text-gray-400">
                   Para empezar, selecciona una sección o proyecto del explorador
                 </p>
                 {isMobile && (
