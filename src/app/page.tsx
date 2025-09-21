@@ -370,7 +370,7 @@ export default function VSCodePortfolio(): React.ReactElement {
             : 'w-64 md:w-56'
         } bg-gray-100 dark:bg-gray-800 border-r border-gray-300 dark:border-gray-700 
         flex flex-col transition-all duration-300 flex-shrink-0 ${
-          isMobile ? 'fixed inset-y-0 left-0 z-40 shadow-lg' : 'relative'
+          isMobile ? 'inset-y-0 left-0 z-40 shadow-lg' : 'relative'
         }`}
         aria-label="Explorador de archivos"
       >
